@@ -14,7 +14,7 @@ app
     .use(bodyParser.json())// middleware qui sert a parser toutes les entres de la web app du format string au format json
     .use(cors())
 
-app.get('/api', (req, res) => res.json('hello Todo_list_api'))
+app.get('/', (req, res) => res.json('hello Todo_list_api'))
 
 require('./src/routes/add-todo')(app)
 require('./src/routes/get-todo')(app)
