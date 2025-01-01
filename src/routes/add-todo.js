@@ -1,7 +1,7 @@
 const {Todo} = require('../dataBase/sequelize')
 const { ValidationError, UniqueConstraintError } = require('sequelize')
 module.exports = (app) => {
-    app.post('api/add-todo', async (req, res) => {
+    app.post('/Todo_list_api/add-todo', async (req, res) => {
         Todo.create(req.body)
         .then(Todo =>{
             const message = 'todo created'
