@@ -17,7 +17,7 @@ app
 app.get('/', (req, res) => res.json('hello Todo_list_api'))
 
 require('./src/routes/add-todo')(app)
-require('./src/routes/get-todo')(app)
+require('/src/routes/get-todo')(app)
 require('./src/routes/remove-todo')(app)
 require('./src/routes/check-todo')(app)
 
