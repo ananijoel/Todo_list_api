@@ -6,7 +6,7 @@ const cors = require('cors')
 
 const {Todo} = require('./src/dataBase/sequelize')
 
-const staticport = 3743
+const staticport = 3000
 const app = express()
 const port = process.env.PORT || staticport
 
