@@ -1,7 +1,7 @@
 const {Todo} = require('../dataBase/sequelize')
 const { ValidationError, UniqueConstraintError } = require('sequelize')
 module.exports = (app) => { 
-    app.delete('/Todo_list_api/remove-todo/:id', async (req, res) => {
+    app.delete('api/remove-todo/:id', async (req, res) => {
         Todo.findByPk(req.params.id)
         .then(Todo =>{
             if(Todo == null){
