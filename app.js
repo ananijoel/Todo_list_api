@@ -17,20 +17,9 @@ app
     .use(cors())
 
 app.get('/', (req, res) => res.json('hello Todo_list_api'))
-app.get('/api/get-todo', async (req, res) => {
-    Todo.findAll()
-    .then(Todo =>{
-        const message = 'todo find'
-        res.json(Todo)
-    })
-    .catch(error => {
-        const message = `Le todo n'a pas pu être ajouté. Réessayez dans quelques instants.`
-        res.status(500).json({ message, data: error })
-      })
-})
 
 require('./src/routes/add-todo')(app)
-//require('./src/routes/get-todo')(app)
+require('./src/routes/get-todo')(app)
 require('./src/routes/remove-todo')(app)
 require('./src/routes/check-todo')(app)
 
