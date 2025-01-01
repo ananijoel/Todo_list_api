@@ -4,8 +4,9 @@ let demo = false
 todo_model = require('../models/todo')
 
 if(process.env.NODE_ENV === 'production'){
-    sequelize = new Sequelize('', '', '  ', {
-       host: '',
+    sequelize = new Sequelize('ulrihrpy_anatide', 'ulrihrpy_anatide', '775SGnvmdesEKk9RAKN9mk3Y', {
+       host: 'localhost',
+       port: 3306,
        dialect: 'mariadb',
        dialectOptions: {
          timezone: 'Etc/GMT',
