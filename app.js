@@ -4,7 +4,7 @@ const bodyParser = require('body-parser')
 const sequelize = require('./src/dataBase/sequelize')
 const cors = require('cors')
 
-const staticport = 3000
+const staticport = 3743
 const app = express()
 const port = process.env.PORT || staticport
 
