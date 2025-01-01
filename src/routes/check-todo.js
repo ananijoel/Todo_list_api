@@ -1,6 +1,6 @@
 const {Todo} = require('../dataBase/sequelize')
 module.exports = (app) => { 
-    app.put('/check-todo/:id', async (req, res) => {
+    app.put('api/check-todo/:id', async (req, res) => {
         Todo.findByPk(req.params.id)
         .then(Todo =>{
             if(Todo == null){

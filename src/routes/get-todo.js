@@ -1,7 +1,7 @@
 const {Todo} = require('../dataBase/sequelize')
 
 module.exports = (app) => {
-    app.get('/get-todo', async (req, res) => {
+    app.get('api/get-todo', async (req, res) => {
         Todo.findAll()
         .then(Todo =>{
             const message = 'todo find'
